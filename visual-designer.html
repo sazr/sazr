@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+    console.time( 'initVdIframe' );
+    window.onload = function() {
+        var loadTime = window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart;
+        console.log( 'Page load time is ' + loadTime );
+    }
+    </script>
+    <title>Visual Designer Demo</title>
+    <meta charset="utf-8"></meta>
+    <link href="https://unpkg.com/visual-designer@0.4.8/dist/css/visual-designer.css" rel="stylesheet" media="all" />
+<!--     <link href="../spike/dist/css/animate.css" rel="stylesheet" media="all" /> -->
+    <style type="text/css">
+    /* Superficial styling */
+    .vd-release {
+        /*margin-top: 120px;*/
+    }
+    </style>
+</head>
+
+<body>
+    <div data-type="visual-designer"></div>
+    <button id="my-btn">Export</button>
+    <div data-type="visual-designer"></div>
+    <script src="https://unpkg.com/visual-designer@0.4.8/inc/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/visual-designer@0.4.8/inc/jquery-ui.min.js"></script>
+    <script type='text/javascript' src='https://unpkg.com/visual-designer@0.4.8/inc/jquery.ui.touch-punch.min.js'></script>
+    <script type="text/javascript" src="https://unpkg.com/visual-designer@0.4.8/dist/js/visual-designer.min.js"></script>
+    <script type="text/javascript">
+    $( document ).ready( function() {
+
+        var designer = vD.init( $( "[data-type='visual-designer']" ), 'vDFramework', true );
+
+    } );
+    </script>
+</body>
+
+</html>
